@@ -1,0 +1,10 @@
+﻿Model,Classe,Precision (%),Recall (%),F1 (%)
+Random Forest,buida,53.1,87.8,66.2
+Random Forest,normal,96.1,74.9,84.2
+Random Forest,plena,29.1,86.9,43.6
+Historical Avg (HA),buida,49.5,28.3,36.0
+Historical Avg (HA),normal,83.3,92.0,87.4
+Historical Avg (HA),plena,24.3,15.8,19.1
+Seasonal Naive 7d (SN7),buida,46.2,45.5,45.9
+Seasonal Naive 7d (SN7),normal,85.7,85.2,85.5
+Seasonal Naive 7d (SN7),plena,27.5,26.7,27.1

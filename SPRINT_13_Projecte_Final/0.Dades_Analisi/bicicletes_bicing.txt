@@ -1,0 +1,185 @@
+cmd
+
+C:\'ruta de carpeta'
+
+C:\'ruta de carpeta'>duckdb bicicletes.duckdb
+DuckDB v1.5.0 (Variegata)
+Enter ".help" for usage hints.
+
+create table bicing_1 as
+select
+    station_id,
+    num_bikes_available,
+    "num_bikes_available_types.mechanical" AS num_bikes_available_types_mechanical,
+    "num_bikes_available_types.ebike"      AS num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+from read_csv('bicing_grouped\grupo_header_1.csv', auto_type_candidates = ['VARCHAR']);
+
+
+create table bicing_2 as
+select
+    station_id,
+    num_bikes_available,
+    "num_bikes_available_types.mechanical" AS num_bikes_available_types_mechanical,
+    "num_bikes_available_types.ebike"      AS num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+from read_csv('bicing_grouped\grupo_header_2.csv', auto_type_candidates = ['VARCHAR']);
+
+
+create table bicing_3 as
+select
+    station_id,
+    num_bikes_available,
+    "num_bikes_available_types.mechanical" AS num_bikes_available_types_mechanical,
+    "num_bikes_available_types.ebike"      AS num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+from read_csv('bicing_grouped\grupo_header_3.csv', auto_type_candidates = ['VARCHAR']);
+
+
+create table bicing_4 as
+select
+    station_id,
+    num_bikes_available,
+    "num_bikes_available_types.mechanical" AS num_bikes_available_types_mechanical,
+    "num_bikes_available_types.ebike"      AS num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+from read_csv('bicing_grouped\grupo_header_4.csv', auto_type_candidates = ['VARCHAR']);
+
+
+create table bicing_5 as
+select
+    station_id,
+    num_bikes_available,
+    "num_bikes_available_types.mechanical" AS num_bikes_available_types_mechanical,
+    "num_bikes_available_types.ebike"      AS num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+from read_csv('bicing_grouped\grupo_header_5.csv', auto_type_candidates = ['VARCHAR']);
+
+
+create table bicing_6 as
+select
+    station_id,
+    num_bikes_available,
+    "num_bikes_available_types.mechanical" AS num_bikes_available_types_mechanical,
+    "num_bikes_available_types.ebike"      AS num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+from read_csv('bicing_grouped\grupo_header_6.csv', auto_type_candidates = ['VARCHAR']);
+
+
+
+CREATE TABLE bicing AS
+SELECT
+    station_id,
+    num_bikes_available,
+    num_bikes_available_types_mechanical,
+    num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+FROM bicing_1
+
+UNION ALL
+
+SELECT
+    station_id,
+    num_bikes_available,
+    num_bikes_available_types_mechanical,
+    num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+FROM bicing_2
+
+UNION ALL
+
+SELECT
+    station_id,
+    num_bikes_available,
+    num_bikes_available_types_mechanical,
+    num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+FROM bicing_3
+
+UNION ALL
+
+SELECT
+    station_id,
+    num_bikes_available,
+    num_bikes_available_types_mechanical,
+    num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+FROM bicing_4
+
+UNION ALL
+
+SELECT
+    station_id,
+    num_bikes_available,
+    num_bikes_available_types_mechanical,
+    num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+FROM bicing_5
+
+UNION ALL
+
+SELECT
+    station_id,
+    num_bikes_available,
+    num_bikes_available_types_mechanical,
+    num_bikes_available_types_ebike,
+    num_docks_available,
+    last_reported,
+    last_updated,
+    status,
+    is_renting
+FROM bicing_6;
+
+
+
+create table estaciones_bicing as
+select * 
+from read_csv('data_procesada\info_estaciones_bicing_distrito.csv', auto_type_candidates = ['VARCHAR']);
+
+
+.read bicicletes_creacio_1.sql
+

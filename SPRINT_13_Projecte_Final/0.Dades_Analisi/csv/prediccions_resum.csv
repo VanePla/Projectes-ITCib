@@ -1,0 +1,4 @@
+﻿Model,Balanced Accuracy (%),Macro F1 (%)
+Random Forest (LAG 2),83.2,64.6
+Seasonal Naive 7d,52.5,52.8
+Historical Average,45.4,47.5
