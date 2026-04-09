@@ -47,10 +47,12 @@ SPRINT_13_Projecte_Final/
 ├── 1_exploratori.ipynb                  # Análisis exploratorio: mapa de estaciones,
 │                                        # evolución de viajes, patrones hora/día/mes,
 │                                        # distribución del problema de disponibilidad
+├── 1_exploratorio_es.ipynb              # notebook en castellano
 │
 ├── 2_clustering.ipynb                   # Clustering K-Means (k=5): preparación de
 │                                        # features, normalización, selección de k,
 │                                        # interpretación y mapa de clústeres
+├── 2_clustering_es.ipynb                # notebook en castellano
 │
 ├── bicicletes_creacio_2_rf.sql          # SQL DuckDB: tablas de features para Random
 │                                        # Forest con arquitectura LAG(2) anti-leakage
@@ -59,8 +61,11 @@ SPRINT_13_Projecte_Final/
 ├── 3_prediccions.ipynb                  # Predicción del estado de las estaciones:
 │                                        # Random Forest vs. baselines (HA y SN7),
 │                                        # métricas por clase, importancia de variables
+├── 3_predicciones_es.ipynb              # notebook en castellano
 │
+├── bicing.pdf                           # Informe escrito del proyecto (catalan)
 ├── bicing_es.pdf                        # Informe escrito del proyecto (castellano)
+├── Proyecto_bicing.pptx                 # Presentación para la exposición (catalan)
 ├── Proyecto_bicing_esp.pptx             # Presentación para la exposición (castellano)
 └── README.md                            # Este archivo
 ```
@@ -157,7 +162,7 @@ Arquitectura **LAG(2)**: solo se usan variables disponibles al menos 60 minutos 
 ### Pasos
 
 **1. Descargar los datos**  
-Ejecutar `0_0_dades_bicing_opendata.ipynb` o descargar manualmente desde [Open Data BCN](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/estat-estacions-bicing). Los archivos `.7z` mensuales van a la carpeta `data_raw/`. Descargar tambien desde [Open Data BCN](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/informacio-estacions-bicing) y [Open Data BCN](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/20170706-districtes-barris/resource/cd800462-f326-429f-a67a-c69b7fc4c50a)
+Ejecutar `0_0_dades_bicing_opendata.ipynb` o descargar manualmente desde [Open Data BCN - estado estaciones](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/estat-estacions-bicing). Los archivos `.7z` mensuales van a la carpeta `data_raw/`. Descargar tambien desde [Open Data BCN - infromacion estaciones](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/informacio-estacions-bicing) y [Open Data BCN - geolocalizacion](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/20170706-districtes-barris/resource/cd800462-f326-429f-a67a-c69b7fc4c50a)
 
 **2. Preprocesar los CSVs**
 ```bash
