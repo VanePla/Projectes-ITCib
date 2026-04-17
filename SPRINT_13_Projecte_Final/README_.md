@@ -33,33 +33,34 @@ El projecte respon tres preguntes clau:
 
 ```
 SPRINT_13_Projecte_Final/
-│
-├── 0_0_dades_bicing_opendata.ipynb      # Descàrrega i exploració inicial d'Open Data BCN
-├── 0_1_dades_headers.py                 # Anàlisi de capçaleres dels CSVs descarregats
-├── 0_2_dades_headers_concat.py          # Concatenació de CSVs per tipus de capçalera
-│
-├── bicicletes_bicing.txt                # Instruccions per crear la base de dades DuckDB
-│                                        # des de zero (comandes CMD pas a pas)
-├── bicicletes_creacio_1.sql             # SQL DuckDB: pipeline de dades (taules origen,
-│                                        # neteja, enriquiment, agregacions,
-│                                        # indicadors de clustering i baselines)
-│
-├── 1_exploratori.ipynb                  # Anàlisi exploratòria: mapa d'estacions,
-│                                        # evolució de viatges, patrons hora/dia/mes,
-│                                        # distribució del problema de disponibilitat
-│
-├── 2_clustering.ipynb                   # Clustering K-Means (k=5): preparació de
-│                                        # features, normalització, selecció de k,
-│                                        # interpretació i mapa de clústers
-│
-├── bicicletes_creacio_2_rf.sql          # SQL DuckDB: taules de features per a Random
-│                                        # Forest amb arquitectura LAG(2) anti-leakage
-│                                        # (rf_nab_perfil, rf_features_train, rf_features_test)
-│
-├── 3_prediccions.ipynb                  # Predicció de l'estat de les estacions:
-│                                        # Random Forest vs. baselines (HA i SN7),
-│                                        # mètriques per classe, importància de variables
-│
+├── 0.Dades_Analisi/
+    │
+    ├── 0_0_dades_bicing_opendata.ipynb      # Descàrrega i exploració inicial d'Open Data BCN
+    ├── 0_1_dades_headers.py                 # Anàlisi de capçaleres dels CSVs descarregats
+    ├── 0_2_dades_headers_concat.py          # Concatenació de CSVs per tipus de capçalera
+    │
+    ├── bicicletes_bicing.txt                # Instruccions per crear la base de dades DuckDB
+    │                                        # des de zero (comandes CMD pas a pas)
+    ├── bicicletes_creacio_1.sql             # SQL DuckDB: pipeline de dades (taules origen,
+    │                                        # neteja, enriquiment, agregacions,
+    │                                        # indicadors de clustering i baselines)
+    │
+    ├── 1_exploratori.ipynb                  # Anàlisi exploratòria: mapa d'estacions,
+    │                                        # evolució de viatges, patrons hora/dia/mes,
+    │                                        # distribució del problema de disponibilitat
+    │
+    ├── 2_clustering.ipynb                   # Clustering K-Means (k=5): preparació de
+    │                                        # features, normalització, selecció de k,
+    │                                        # interpretació i mapa de clústers
+    │
+    ├── bicicletes_creacio_2_rf.sql          # SQL DuckDB: taules de features per a Random
+    │                                        # Forest amb arquitectura LAG(2) anti-leakage
+    │                                        # (rf_nab_perfil, rf_features_train, rf_features_test)
+    │
+    ├── 3_prediccions.ipynb                  # Predicció de l'estat de les estacions:
+    │                                        # Random Forest vs. baselines (HA i SN7),
+    │                                        # mètriques per classe, importància de variables
+    │
 ├── bicing.pdf                           # Informe escrit del projecte
 ├── Proyecto_bicing.pptx                 # Presentació per a l'exposició
 └── README.md                            # Aquest fitxer
